@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Benatti</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div>
+                <h1>Benatti</h1>
+                <p>Painel administrativo</p>
+            </div>
+        </header>
+
+        <!-- LOGIN -->
+        <section id="login-area" class="login-card">
+
+            <h2>Acesso administrativo</h2>
+            <p>Entre com seu e-mail e senha.</p>
+
+            <form id="login-form">
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="seu@email.com"
+                    required
+                >
+
+                <label for="password">Senha</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Sua senha"
+                    required
+                >
+
+                <button type="submit" id="login-button">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p id="login-msg" class="message"></p>
+
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" hidden>
+
+            <div class="dashboard-header">
+                <div>
+                    <h2>Visão geral</h2>
+                    <p>Confira as avaliações dos clientes.</p>
+                </div>
+
+                <button id="logout-button" class="logout">
+                    Sair
+                </button>
+            </div>
+
+            <!-- INDICADORES -->
+            <div class="stats">
+
+                <div class="stat">
+                    <span>Total de avaliações</span>
+                    <strong id="total">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Média da comida</span>
+                    <strong id="media-comida">0.0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Média do serviço</span>
+                    <strong id="media-servico">0.0</strong>
+                </div>
+
+            </div>
+
+            <!-- LISTA -->
+            <div class="evaluations-header">
+                <h2>Avaliações recebidas</h2>
+                <button id="refresh-button" class="refresh">
+                    Atualizar
+                </button>
+            </div>
+
+            <p id="loading" class="message"></p>
+
+            <div id="evaluations-list"></div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -63,3 +63,107 @@ textarea{min-height:96px;resize:vertical}
 .item .sc{margin:6px 0}
 .item p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
 .item .tag{font-weight:600}
+
+/* =================================
+   RESPONSIVIDADE - CELULARES
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    main {
+        width: 100%;
+        padding: 20px 16px 40px;
+    }
+
+    .logo {
+        width: min(220px, 65vw);
+        margin-bottom: 16px;
+    }
+
+    .intro h1 {
+        font-size: 1.35rem;
+    }
+
+    .intro {
+        margin-bottom: 22px;
+    }
+
+    .box {
+        padding: 18px 16px;
+        margin-bottom: 14px;
+    }
+
+    .box h2 {
+        font-size: 1.05rem;
+    }
+
+    .stars {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .stars button {
+        font-size: 34px;
+        padding: 4px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .thanks {
+        padding: 25px 16px;
+    }
+}
+
+/* =================================
+   CELULARES PEQUENOS
+================================= */
+
+@media screen and (max-width: 480px) {
+
+    main {
+        padding: 16px 12px 32px;
+    }
+
+    .logo {
+        width: min(190px, 60vw);
+    }
+
+    .intro h1 {
+        font-size: 1.2rem;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .box {
+        padding: 16px 13px;
+        border-radius: 9px;
+    }
+
+    .stars {
+        gap: 7px;
+    }
+
+    .stars button {
+        font-size: 31px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

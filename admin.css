@@ -1,0 +1,285 @@
+
+:root {
+    --bg: #E8E1CE;
+    --card: #F8F4EA;
+    --txt: #3F2A1C;
+    --green: #2A3B31;
+    --line: #d3c9ae;
+    --error: #8a2d1d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--txt);
+    font: 16px/1.6 Arial, sans-serif;
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 40px auto;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    color: var(--green);
+}
+
+.header p {
+    margin: 0;
+}
+
+.login-card,
+.stat,
+.evaluation {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.login-card {
+    max-width: 420px;
+    margin: 60px auto;
+}
+
+.login-card h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 14px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.message {
+    text-align: center;
+    color: var(--error);
+}
+
+.dashboard-header,
+.evaluations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2,
+.evaluations-header h2 {
+    margin-bottom: 0;
+}
+
+.logout {
+    background: var(--error);
+}
+
+.refresh {
+    background: var(--green);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stat span {
+    display: block;
+    font-size: 14px;
+    opacity: .8;
+}
+
+.stat strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 30px;
+    color: var(--green);
+}
+
+.evaluation {
+    margin-bottom: 15px;
+}
+
+.evaluation h3 {
+    margin: 0 0 5px;
+}
+
+.evaluation p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.evaluation .date {
+    font-size: 13px;
+    opacity: .7;
+}
+
+.evaluation .rating {
+    color: var(--green);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header,
+    .evaluations-header {
+        align-items: flex-start;
+    }
+
+    .stat {
+        padding: 16px;
+    }
+}
+
+/* =================================
+   RESPONSIVIDADE - DASHBOARD
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .header {
+        margin-bottom: 24px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .login-card {
+        width: 100%;
+        margin: 35px auto;
+        padding: 20px 16px;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-header h2 {
+        font-size: 21px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 16px;
+    }
+
+    .stat strong {
+        font-size: 25px;
+    }
+
+    .evaluation {
+        padding: 16px;
+    }
+
+    .evaluations-header {
+        flex-wrap: wrap;
+    }
+
+    button {
+        min-height: 44px;
+    }
+}
+
+/* =================================
+   CELULARES PEQUENOS
+================================= */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding: 0 12px;
+        margin: 16px auto;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        gap: 12px;
+    }
+
+    .dashboard-header,
+    .evaluations-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logout,
+    .refresh {
+        width: 100%;
+    }
+
+    .stat strong {
+        font-size: 23px;
+    }
+
+    .evaluation {
+        border-radius: 9px;
+        padding: 14px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    .login-card {
+        margin-top: 25px;
+    }
+}
