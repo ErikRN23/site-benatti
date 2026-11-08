@@ -1,6 +1,6 @@
 
 // Configure com os dados do seu projeto Supabase.
-const SUPABASE_URL = "https://supabase.com/dashboard/project/xkdgnltpsreiixyfqyex/settings/api-keys";
+const SUPABASE_URL = "https://xkdgnltpsreiixyfqyex.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_JxhJZ-L4tjIa2otmi2B1dQ_53fCxamM";
 
 const LABELS = ["Ruim", "Regular", "Bom", "Muito bom", "Excelente"];
