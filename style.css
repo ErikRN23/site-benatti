@@ -1,0 +1,65 @@
+:root{--bg:#E8E1CE;--card:#F8F4EA;--txt:#3F2A1C;--green:#2A3B31;--on-green:#F8F4EA;--line:#d3c9ae;--star-off:#cfc5a9;--star-on:#2A3B31;--err:#8a2d1d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1812;--card:#2b2219;--txt:#E8E1CE;--green:#E8E1CE;--on-green:#2A3B31;--line:#4a3d2e;--star-off:#5a4b39;--star-on:#E8E1CE;--err:#f0a08e}}
+:root[data-theme="dark"]{--bg:#1e1812;--card:#2b2219;--txt:#E8E1CE;--green:#E8E1CE;--on-green:#2A3B31;--line:#4a3d2e;--star-off:#5a4b39;--star-on:#E8E1CE;--err:#f0a08e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:17px/1.6 "Source Serif 4",Georgia,serif}
+main{max-width:720px;margin:0 auto;padding:28px 20px 56px}
+h1,h2,h3{font-family:"Libre Baskerville",Georgia,serif;color:var(--txt);line-height:1.25;margin:0}
+.logo{display:block;width:min(300px,72vw);aspect-ratio:520/526;border-radius:50%;margin:0 auto 18px}
+.intro{text-align:center;max-width:46ch;margin:0 auto 28px}
+.intro h1{font-size:1.55rem;margin-bottom:8px}
+.intro p{margin:0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-bottom:16px}
+.box h2{font-size:1.15rem;color:var(--green);margin-bottom:4px}
+.hint{margin:0 0 12px;font-size:.95rem;opacity:.85}
+.stars {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  min-height: 45px;
+}
+
+.stars button {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 2px;
+  cursor: pointer;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--star-off, #cfc5a9);
+  border-radius: 6px;
+}
+
+.stars button.on {
+  color: var(--star-on, #2A3B31) !important;
+}
+.lbl{min-height:1.6em;font-size:.95rem;margin:0 0 8px}
+label{display:block;font-weight:600;font-size:.95rem;margin:10px 0 4px}
+input,textarea{width:100%;font:inherit;color:var(--txt);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+textarea{min-height:96px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.btn{display:block;width:100%;background:var(--green);color:var(--on-green);border:0;border-radius:8px;font:700 1rem "Libre Baskerville",Georgia,serif;padding:14px 18px;cursor:pointer;margin-top:6px}
+.btn:disabled{opacity:.55;cursor:default}
+.msg{margin:12px 0 0;text-align:center;min-height:1.5em}
+.msg.err{color:var(--err)}
+.thanks{text-align:center;padding:32px 22px}
+.thanks h2{font-size:1.4rem;margin-bottom:8px}
+.link{background:none;border:0;color:var(--green);text-decoration:underline;font:inherit;cursor:pointer;padding:4px}
+#admin{margin-top:44px;border-top:2px solid var(--green);padding-top:28px}
+#admin h2{font-size:1.35rem;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+.stat b{display:block;font:700 1.6rem "Libre Baskerville",Georgia,serif;color:var(--green)}
+.stat span{font-size:.85rem}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:12px}
+.item .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.9rem;opacity:.9}
+.item .sc{margin:6px 0}
+.item p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.item .tag{font-weight:600}
